@@ -2,117 +2,122 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>KANGMARKUS</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
       padding: 0;
+      background-color: #111820;
       font-family: 'Poppins', sans-serif;
-      background-color: #0d0d0d;
       color: #fff;
       text-align: center;
     }
 
+    .profile {
+      margin-top: 40px;
+    }
+
+    .profile img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #c00000;
+    }
+
     h1 {
-      margin-top: 30px;
-      font-size: 34px;
-      letter-spacing: 2px;
-      color: #ff4d4d;
+      margin-top: 20px;
+      font-size: 32px;
+      letter-spacing: 1px;
     }
 
     .description {
-      margin: 15px 20px;
-      font-size: 16px;
-      line-height: 1.6;
+      margin: 15px 20px 5px;
+      font-size: 13px;
       color: #ccc;
+      line-height: 1.6;
+    }
+
+    .highlight {
+      font-weight: bold;
+      margin-top: 10px;
+      color: #fff;
     }
 
     .menu {
-      margin: 40px auto;
+      margin-top: 30px;
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 15px;
-      max-width: 400px;
+      max-width: 360px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .menu a {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
+      gap: 12px;
       text-decoration: none;
-      padding: 14px 24px;
-      border-radius: 10px;
-      color: #fff;
-      background-color: #222;
-      width: 100%;
+      font-weight: 600;
       font-size: 16px;
-      transition: all 0.3s ease;
-      border: 1px solid #444;
-    }
-
-    .menu a:hover {
-      background-color: #444;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-    }
-
-    /* Login & Daftar Special Style */
-    .menu .login,
-    .menu .daftar {
-      font-size: 18px;
-      font-weight: bold;
-      border: 2px solid #000;
-    }
-
-    .menu .login {
-      background-color: #fff;
-      color: #000;
-    }
-
-    .menu .daftar {
-      background-color: #c20000;
+      padding: 15px;
+      border-radius: 12px;
+      width: 100%;
       color: #fff;
-      animation: blink 1s infinite alternate;
+      transition: 0.3s ease;
+    }
+
+    .login {
+      background-color: #7a0f0f;
+    }
+
+    .daftar {
+      background-color: #a91414;
+      animation: blink 1.2s infinite alternate;
     }
 
     @keyframes blink {
       from { opacity: 1; }
-      to { opacity: 0.7; }
+      to { opacity: 0.85; }
     }
 
-    /* Responsive */
-    @media (max-width: 480px) {
-      .menu a {
-        font-size: 15px;
-        padding: 12px;
-      }
+    .dark-button {
+      background-color: #2c2f36;
     }
   </style>
 </head>
 <body>
 
+  <div class="profile">
+    <img src="https://yourdomain.com/foto-kamu.jpg" alt="Kangmarkus" />
+  </div>
+
   <h1>KANGMARKUS</h1>
 
   <div class="description">
-    ANGKA ONLINE / GAMES BOLA TERNAMA SEPERTI SBOBET SPORTS, SABA SPORTS, PINNACLE SPORTS, SLOT, LIVEGAMES SERTA PERMAINAN TERBAIK<br>
-    <strong>HADIAH FULLBET</strong><br>
-    4D x 10.000 / 3D x 1.000 / 2D x 100<br>
-    (Termasuk TotoMacau)<br>
-    <strong>Minimal Deposit Rp.10,000 dan Withdraw Rp.50,000</strong>
+    ANGKA ONLINE / GAMES BOLA TERNAMA SEPERTI SBOBET SPORTS, SABA SPORTS, PINNACLE SPORTS. SLOT, LIVEGAMES SERTA PERMAINAN TEMBAK IKAN
+  </div>
+
+  <div class="highlight">
+    HADIAH FULLBET<br />
+    4D × 10.000 / 3D × 1.000 / 2D × 100 (Termasuk TotoMacau)
+    <br /><br />
+    Minimal Deposit Rp.10,000 dan Withdraw Rp.50,000
   </div>
 
   <div class="menu">
-    <a href="https://bangun.angkabet788.life/?referralid=anshun168" target="_blank" class="login">🔐 Login</a>
-    <a href="https://rindu.angkabet788.life/?referralid=anshun168" target="_blank" class="daftar">📝 Daftar</a>
-    <a href="https://rtpslotangkabet06913.com/?utm_medium=social&utm_source=heylink.me" target="_blank">🎰 RTP SLOT</a>
-    <a href="https://direct.lc.chat/16829148/?utm_medium=social&utm_source=heylink.me" target="_blank">💬 Live Chat Admin</a>
-    <a href="https://www.youtube.com/@kangmarkuss" target="_blank">📺 YouTube</a>
-    <a href="https://wa.me/6282310203030" target="_blank">📱 0823-1020-3030</a>
+    <a class="login" href="https://bangun.angkabet788.life/?referralid=anshun168" target="_blank">LOGIN</a>
+    <a class="daftar" href="https://rindu.angkabet788.life/?referralid=anshun168" target="_blank">DAFTAR</a>
+    <a class="dark-button" href="https://rtpslotangkabet06913.com/?utm_medium=social&utm_source=heylink.me" target="_blank">🎯 RTP SLOT GACOR</a>
+    <a class="dark-button" href="https://direct.lc.chat/16829148/?utm_medium=social&utm_source=heylink.me" target="_blank">💬 LIVECHAT</a>
+    <a class="dark-button" href="https://www.youtube.com/@kangmarkuss" target="_blank">▶️ YOUTUBE</a>
+    <a class="dark-button" href="https://wa.me/6282310203030" target="_blank">📱 0823-1020-3030</a>
   </div>
 
 </body>
