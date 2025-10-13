@@ -5,100 +5,94 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>KANGMARKUS</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
+    /* ===== Reset & Base ===== */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Poppins', sans-serif;
       background: radial-gradient(circle at top, #1a0000 0%, #000 100%);
       color: #fff;
-      text-align: center;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: start;
       min-height: 100vh;
       overflow-x: hidden;
     }
 
-    .profile {
-      margin-top: 40px;
-    }
-
+    /* ===== Profile ===== */
+    .profile { margin-top: 40px; }
     .profile img {
-      width: 160px;
-      height: 160px;
+      width: 160px; height: 160px;
       border-radius: 50%;
       object-fit: cover;
       border: 4px solid #b30000;
-      box-shadow: 0 0 25px rgba(255, 0, 0, 0.6);
+      box-shadow: 0 0 25px rgba(255,0,0,0.6);
       transition: transform 0.4s ease;
     }
+    .profile img:hover { transform: scale(1.05); }
 
-    .profile img:hover {
-      transform: scale(1.05);
-    }
-
+    /* ===== Heading ===== */
     h1 {
       font-size: 38px;
       margin: 20px 0 10px 0;
       color: #ff1a1a;
       letter-spacing: 1.5px;
-      text-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+      text-shadow: 0 0 15px rgba(255,0,0,0.6);
     }
 
+    /* ===== Description ===== */
     .description {
-      font-size: 16px;
-      font-weight: bold;
+      font-size: 16px; font-weight: 600;
       max-width: 90%;
-      color: #ffffff;
+      color: #fff;
       margin-bottom: 25px;
       line-height: 1.7;
-      text-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+      text-align: center;
+      text-shadow: 0 0 10px rgba(255,0,0,0.3);
     }
 
-    /* Kotak informasi persegi elegan */
+    /* ===== Info Box ===== */
     .info-box {
       background: linear-gradient(180deg, #1a0000 0%, #0d0d0d 100%);
       border: 2px solid #b30000;
-      border-radius: 20px;
+      border-radius: 18px;
       width: 320px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      margin: 25px 0;
-      box-shadow: 0 0 25px rgba(255, 0, 0, 0.3);
+      padding: 20px 15px;
+      margin: 20px 0;
+      box-shadow: 0 0 20px rgba(255,0,0,0.3);
       text-align: center;
-      padding: 25px;
-      animation: glowPulse 3s infinite;
+      line-height: 1.4;
+      font-size: 15px;
+      font-weight: 400;
+      color: #e8e8e8;
+      letter-spacing: 0.2px;
+      animation: glowPulse 4s infinite alternate;
     }
-
     .info-box strong {
       color: #ff3333;
-      font-size: 18px;
-      text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+      text-shadow: 0 0 8px rgba(255,0,0,0.5);
     }
-
     @keyframes glowPulse {
       0% { box-shadow: 0 0 10px rgba(255,0,0,0.3); }
-      50% { box-shadow: 0 0 25px rgba(255,0,0,0.6); }
+      50% { box-shadow: 0 0 25px rgba(255,200,200,0.4); }
       100% { box-shadow: 0 0 10px rgba(255,0,0,0.3); }
     }
 
+    /* ===== Menu ===== */
     .menu {
-      width: 90%;
-      max-width: 380px;
+      width: 90%; max-width: 380px;
       display: flex;
       flex-direction: column;
       gap: 18px;
       margin-top: 20px;
     }
-
     .menu a {
       display: flex;
       align-items: center;
-      justify-content: center;
       gap: 12px;
       padding: 18px;
       text-decoration: none;
@@ -108,30 +102,39 @@
       border-radius: 14px;
       text-transform: uppercase;
       transition: all 0.3s ease;
-      box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+      box-shadow: 0 0 15px rgba(255,0,0,0.3);
       font-size: 18px;
+      letter-spacing: 0.5px;
+      animation: float 4s ease-in-out infinite alternate;
     }
-
-    .menu a:hover {
-      transform: scale(1.06);
-      box-shadow: 0 0 25px rgba(255, 0, 0, 0.6);
-    }
-
     .menu a:first-child,
     .menu a:nth-child(2) {
-      font-size: 22px;
-      padding: 22px;
+      font-size: 20px; padding: 22px;
       background: linear-gradient(135deg, #ff0000 0%, #990000 100%);
       font-weight: 700;
+      animation: softPulse 3s infinite, float 4s ease-in-out infinite alternate;
     }
-
+    .menu a:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(255,150,150,0.5), 0 0 15px rgba(255,255,255,0.3);
+    }
     .menu-icon {
-      width: 38px;
-      height: 38px;
+      width: 38px; height: 38px;
       object-fit: contain;
-      filter: drop-shadow(0 0 5px rgba(255, 0, 0, 0.6));
+      filter: drop-shadow(0 0 5px rgba(255,0,0,0.6));
     }
 
+    @keyframes softPulse {
+      0%,100% { box-shadow: 0 0 15px rgba(255,0,0,0.3); }
+      50% { box-shadow: 0 0 30px rgba(255,200,200,0.5); }
+    }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+      100% { transform: translateY(0); }
+    }
+
+    /* ===== Footer ===== */
     footer {
       margin-top: 40px;
       font-size: 13px;
@@ -143,7 +146,7 @@
       background-color: #0a0a0a;
     }
 
-    /* Responsif */
+    /* ===== Responsive ===== */
     @media (max-width: 500px) {
       h1 { font-size: 30px; }
       .info-box { width: 280px; padding: 20px; }
@@ -152,11 +155,13 @@
   </style>
 </head>
 <body>
-  <!-- Musik ringan otomatis -->
+
+  <!-- Musik ambient dreamy piano -->
   <audio autoplay loop hidden>
-    <source src="https://cdn.pixabay.com/download/audio/2023/07/28/audio_b0a4fa0d3c.mp3?filename=chillout-background-music-149506.mp3" type="audio/mpeg">
+    <source src="https://cdn.pixabay.com/download/audio/2023/09/14/audio_c13d5acda7.mp3?filename=soft-piano-ambient-155859.mp3" type="audio/mpeg">
   </audio>
 
+  <!-- Profil -->
   <div class="profile">
     <img src="profile_circle.png" alt="Kang Markus" />
   </div>
@@ -176,22 +181,22 @@
 
   <div class="menu">
     <a href="https://bangun.angkabet788.life/?referralid=anshun168" target="_blank">
-      <img src="logo-removebg-preview.png" class="menu-icon" alt="Logo" /> Login
+      <img src="logo-removebg-preview.png" class="menu-icon" alt="Logo" /> LOGIN
     </a>
     <a href="https://angkabet30294.com/?referralid=anshun168" target="_blank">
-      <img src="logo-removebg-preview.png" class="menu-icon" alt="Logo" /> Login Alternatif
+      <img src="logo-removebg-preview.png" class="menu-icon" alt="Logo" /> LOGIN ALTERNATIF
     </a>
     <a href="https://rindu.angkabet788.life/?referralid=anshun168" target="_blank">
-      <img src="logo-removebg-preview.png" class="menu-icon" alt="Logo" /> Daftar
+      <img src="logo-removebg-preview.png" class="menu-icon" alt="Logo" /> DAFTAR
     </a>
     <a href="https://rtpslotangkabet06913.com/?utm_medium=social&utm_source=heylink.me" target="_blank">
-      <img src="logo-removebg-preview.png" class="menu-icon" alt="Logo" /> RTP Slot
+      <img src="logo-removebg-preview.png" class="menu-icon" alt="Logo" /> RTP SLOT
     </a>
     <a href="https://direct.lc.chat/16829148/?utm_medium=social&utm_source=heylink.me" target="_blank">
-      <img src="logo-removebg-preview.png" class="menu-icon" alt="Logo" /> Live Chat Admin
+      <img src="logo-removebg-preview.png" class="menu-icon" alt="Logo" /> LIVE CHAT ADMIN
     </a>
     <a href="https://www.youtube.com/@kangmarkuss" target="_blank">
-      <img src="logo-removebg-preview.png" class="menu-icon" alt="Logo" /> YouTube
+      <img src="logo-removebg-preview.png" class="menu-icon" alt="Logo" /> YOUTUBE
     </a>
     <a href="https://kangmarkus.com" target="_blank">
       <img src="logo-removebg-preview.png" class="menu-icon" alt="Logo" /> WA 0817-1730-3255
@@ -201,5 +206,6 @@
   <footer>
     &copy; 2025 Kangmarkus.com | Semua Hak Dilindungi | © Copyright 2014 - 2025 Kangmarkus
   </footer>
+
 </body>
 </html>
