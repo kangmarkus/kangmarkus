@@ -7,7 +7,6 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    /* ===== Reset & Base ===== */
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: 'Poppins', sans-serif;
@@ -18,6 +17,7 @@
       align-items: center;
       min-height: 100vh;
       overflow-x: hidden;
+      position: relative;
     }
 
     /* ===== Profile ===== */
@@ -33,7 +33,6 @@
     }
     .profile img:hover { transform: scale(1.05); }
 
-    /* ===== Heading ===== */
     h1 {
       font-size: 40px;
       margin: 20px 0 10px 0;
@@ -43,7 +42,6 @@
       animation: float 3.5s ease-in-out infinite alternate;
     }
 
-    /* ===== Description ===== */
     .description {
       font-size: 16px; font-weight: 600;
       max-width: 90%;
@@ -54,7 +52,6 @@
       text-shadow: 0 0 10px rgba(255,0,0,0.3);
     }
 
-    /* ===== Info Box ===== */
     .info-box {
       background: linear-gradient(180deg, #1a0000 0%, #0d0d0d 100%);
       border: 2px solid #b30000;
@@ -84,7 +81,6 @@
       100% { box-shadow: 0 0 15px rgba(255,0,0,0.3); }
     }
 
-    /* ===== Menu ===== */
     .menu {
       width: 90%; max-width: 400px;
       display: flex;
@@ -111,8 +107,6 @@
       overflow: hidden;
       animation: float 4s ease-in-out infinite alternate;
     }
-
-    /* Tombol utama lebih besar & elegan */
     .menu a.primary {
       font-size: 22px;
       padding: 25px 22px;
@@ -120,8 +114,6 @@
       background: linear-gradient(135deg, #ff0000 0%, #990000 100%);
       animation: softPulse 3s infinite, float 4s ease-in-out infinite alternate;
     }
-
-    /* Efek light sweep cinematic saat hover */
     .menu a::after {
       content: '';
       position: absolute;
@@ -132,27 +124,15 @@
       transition: all 0.7s ease-in-out;
     }
     .menu a:hover::after { left: 125%; }
-    .menu a:hover {
-      transform: scale(1.06);
-      box-shadow: 0 0 28px rgba(255,150,150,0.5), 0 0 18px rgba(255,255,255,0.3);
-    }
-    .menu-icon {
-      width: 40px; height: 40px;
-      object-fit: contain;
-      filter: drop-shadow(0 0 5px rgba(255,0,0,0.6));
-    }
+    .menu a:hover { transform: scale(1.06); box-shadow: 0 0 28px rgba(255,150,150,0.5),0 0 18px rgba(255,255,255,0.3); }
+    .menu-icon { width: 40px; height: 40px; object-fit: contain; filter: drop-shadow(0 0 5px rgba(255,0,0,0.6)); }
 
     @keyframes softPulse {
       0%,100% { box-shadow: 0 0 18px rgba(255,0,0,0.3); }
       50% { box-shadow: 0 0 35px rgba(255,200,200,0.5); }
     }
-    @keyframes float {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-6px); }
-      100% { transform: translateY(0); }
-    }
+    @keyframes float { 0%{transform:translateY(0);}50%{transform:translateY(-6px);}100%{transform:translateY(0);} }
 
-    /* ===== Footer ===== */
     footer {
       margin-top: 45px;
       font-size: 13px;
@@ -164,7 +144,6 @@
       background-color: #0a0a0a;
     }
 
-    /* ===== Responsive ===== */
     @media (max-width: 500px) {
       h1 { font-size: 32px; }
       .info-box { width: 280px; padding: 20px; }
@@ -175,14 +154,8 @@
 </head>
 <body>
 
-  <!-- Musik ambient dreamy piano -->
-  <audio autoplay loop hidden>
-    <source src="https://cdn.pixabay.com/download/audio/2023/09/14/audio_c13d5acda7.mp3?filename=soft-piano-ambient-155859.mp3" type="audio/mpeg">
-  </audio>
-
-  <!-- Profil -->
   <div class="profile">
-    <img src="profile_circle.png" alt="Kang Markus" />
+    <img src="profile_circle.png" alt="Kang Markus">
   </div>
 
   <h1>KANGMARKUS</h1>
@@ -199,27 +172,13 @@
   </div>
 
   <div class="menu">
-    <a href="https://bangun.angkabet788.life/?referralid=anshun168" target="_blank" class="primary">
-      <img src="logo-removebg-preview.png" class="menu-icon" alt="Logo" /> LOGIN
-    </a>
-    <a href="https://angkabet30294.com/?referralid=anshun168" target="_blank" class="primary">
-      <img src="logo-removebg-preview.png" class="menu-icon" alt="Logo" /> LOGIN ALTERNATIF
-    </a>
-    <a href="https://rindu.angkabet788.life/?referralid=anshun168" target="_blank" class="primary">
-      <img src="logo-removebg-preview.png" class="menu-icon" alt="Logo" /> DAFTAR
-    </a>
-    <a href="https://rtpslotangkabet06913.com/?utm_medium=social&utm_source=heylink.me" target="_blank">
-      <img src="logo-removebg-preview.png" class="menu-icon" alt="Logo" /> RTP SLOT
-    </a>
-    <a href="https://direct.lc.chat/16829148/?utm_medium=social&utm_source=heylink.me" target="_blank">
-      <img src="logo-removebg-preview.png" class="menu-icon" alt="Logo" /> LIVE CHAT ADMIN
-    </a>
-    <a href="https://www.youtube.com/@kangmarkuss" target="_blank">
-      <img src="logo-removebg-preview.png" class="menu-icon" alt="Logo" /> YOUTUBE
-    </a>
-    <a href="https://kangmarkus.com" target="_blank">
-      <img src="logo-removebg-preview.png" class="menu-icon" alt="Logo" /> WA 0817-1730-3255
-    </a>
+    <a href="https://bangun.angkabet788.life/?referralid=anshun168" target="_blank" class="primary"><img src="logo-removebg-preview.png" class="menu-icon" alt="Logo"> LOGIN</a>
+    <a href="https://angkabet30294.com/?referralid=anshun168" target="_blank" class="primary"><img src="logo-removebg-preview.png" class="menu-icon" alt="Logo"> LOGIN ALTERNATIF</a>
+    <a href="https://rindu.angkabet788.life/?referralid=anshun168" target="_blank" class="primary"><img src="logo-removebg-preview.png" class="menu-icon" alt="Logo"> DAFTAR</a>
+    <a href="https://rtpslotangkabet06913.com/?utm_medium=social&utm_source=heylink.me" target="_blank"><img src="logo-removebg-preview.png" class="menu-icon" alt="Logo"> RTP SLOT</a>
+    <a href="https://direct.lc.chat/16829148/?utm_medium=social&utm_source=heylink.me" target="_blank"><img src="logo-removebg-preview.png" class="menu-icon" alt="Logo"> LIVE CHAT ADMIN</a>
+    <a href="https://www.youtube.com/@kangmarkuss" target="_blank"><img src="logo-removebg-preview.png" class="menu-icon" alt="Logo"> YOUTUBE</a>
+    <a href="https://kangmarkus.com" target="_blank"><img src="logo-removebg-preview.png" class="menu-icon" alt="Logo"> WA 0812-6666-6347</a>
   </div>
 
   <footer>
