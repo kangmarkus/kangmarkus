@@ -54,37 +54,58 @@
       text-shadow: 0 0 10px rgba(255,0,0,0.3);
     }
 
-    /* ===== INFO BOX (Revisi) ===== */
-    .info-box {
-      background: transparent; /* Tanpa background kotak */
-      border: 2px solid #ff0000; /* Garis merah */
-      border-radius: 20px;
-      width: 340px;
-      padding: 18px 14px;
-      margin: 25px 0;
-      text-align: center;
-      font-size: 13px; /* Lebih kecil tapi tetap jelas */
-      color: #fff;
-      letter-spacing: 0.4px;
-      text-transform: uppercase;
-      text-shadow: 0 0 10px rgba(255,80,80,0.8);
-      box-shadow: 0 0 18px rgba(255,0,0,0.4), inset 0 0 10px rgba(255,0,0,0.3);
-      animation: borderGlow 3.5s ease-in-out infinite alternate;
-      backdrop-filter: blur(2px);
-    }
+    <style>
+.info-box {
+  background: transparent; /* kotak dihapus */
+  border: 1.5px solid rgba(255, 0, 0, 0.8);
+  border-radius: 18px;
+  width: 340px;
+  padding: 16px 12px;
+  margin: 20px 0;
+  text-align: center;
+  line-height: 1.3; /* rapatkan teks */
+  font-size: 14px;
+  color: #fff;
+  letter-spacing: 0.3px;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+  animation: borderGlow 3.5s ease-in-out infinite alternate;
+  backdrop-filter: blur(2px);
+}
 
-    /* Efek gradasi merah menyala di teks utama */
-    .info-box strong {
-      background: linear-gradient(90deg, #ff0000, #ff6666, #ffffff, #ff6666, #ff0000);
-      background-size: 300%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: shineText 5s linear infinite;
-      font-size: 15px;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      text-shadow: 0 0 10px rgba(255,0,0,0.6);
-    }
+/* Efek gradasi menyala halus untuk tulisan penting */
+.info-box strong {
+  background: linear-gradient(90deg, #ff3333, #ff9999, #ff3333);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shineText 4s linear infinite;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 8px rgba(255, 0, 0, 0.5);
+}
+
+/* Efek glow lembut di garis tepi */
+@keyframes borderGlow {
+  0% { box-shadow: 0 0 10px rgba(255,0,0,0.4), inset 0 0 6px rgba(255,0,0,0.3); }
+  50% { box-shadow: 0 0 22px rgba(255,100,100,0.5), inset 0 0 10px rgba(255,0,0,0.3); }
+  100% { box-shadow: 0 0 10px rgba(255,0,0,0.4), inset 0 0 6px rgba(255,0,0,0.3); }
+}
+
+/* Efek gradasi bergerak lembut pada teks strong */
+@keyframes shineText {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Responsif */
+@media (max-width: 500px) {
+  .info-box { width: 280px; font-size: 13px; padding: 14px; }
+  .info-box strong { font-size: 14px; }
+}
+</style>
+
 
     @keyframes shineText {
       0% { background-position: 0% 50%; }
