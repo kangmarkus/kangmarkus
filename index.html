@@ -29,6 +29,7 @@
       border: 4px solid #b30000;
       box-shadow: 0 0 25px rgba(255,0,0,0.6);
       transition: transform 0.4s ease;
+      animation: float 4s ease-in-out infinite alternate;
     }
     .profile img:hover { transform: scale(1.05); }
 
@@ -39,6 +40,7 @@
       color: #ff1a1a;
       letter-spacing: 1.5px;
       text-shadow: 0 0 15px rgba(255,0,0,0.6);
+      animation: float 3.5s ease-in-out infinite alternate;
     }
 
     /* ===== Description ===== */
@@ -67,7 +69,7 @@
       font-weight: 400;
       color: #e8e8e8;
       letter-spacing: 0.2px;
-      animation: glowPulse 4s infinite alternate;
+      animation: infoGlow 5s ease-in-out infinite alternate;
     }
     .info-box strong {
       color: #ff3333;
@@ -76,10 +78,10 @@
       letter-spacing: 0.4px;
       text-shadow: 0 0 10px rgba(255,0,0,0.5);
     }
-    @keyframes glowPulse {
-      0% { box-shadow: 0 0 10px rgba(255,0,0,0.3); }
+    @keyframes infoGlow {
+      0% { box-shadow: 0 0 15px rgba(255,0,0,0.3); }
       50% { box-shadow: 0 0 30px rgba(255,200,200,0.4); }
-      100% { box-shadow: 0 0 10px rgba(255,0,0,0.3); }
+      100% { box-shadow: 0 0 15px rgba(255,0,0,0.3); }
     }
 
     /* ===== Menu ===== */
@@ -125,17 +127,15 @@
       position: absolute;
       top: 0; left: -75%;
       width: 50%; height: 100%;
-      background: linear-gradient(120deg, rgba(255,255,255,0.0) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0.0) 100%);
+      background: linear-gradient(120deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 100%);
       transform: skewX(-25deg);
       transition: all 0.7s ease-in-out;
     }
     .menu a:hover::after { left: 125%; }
-
     .menu a:hover {
       transform: scale(1.06);
       box-shadow: 0 0 28px rgba(255,150,150,0.5), 0 0 18px rgba(255,255,255,0.3);
     }
-
     .menu-icon {
       width: 40px; height: 40px;
       object-fit: contain;
@@ -188,7 +188,7 @@
   <h1>KANGMARKUS</h1>
 
   <div class="description">
-    KANGMARKUS.COM / KANG MARKUS / ANGKA ONLINE / BET ANGKA, GAMES BOLA TERNAMA SEPERTI SBOBET SPORTS, SABA SPORTS, PINNACLE SPORTS. SLOT, LIVEGAMES SERTA PERMAINAN TEMBAK IKAN
+    KANGMARKUS.COM / KANGMARKUS / ANGKA ONLINE / BET ANGKA, GAMES BOLA TERNAMA SEPERTI SBOBET SPORTS, SABA SPORTS, PINNACLE SPORTS. SLOT, LIVEGAMES SERTA PERMAINAN TEMBAK IKAN
   </div>
 
   <div class="info-box">
@@ -218,7 +218,7 @@
       <img src="logo-removebg-preview.png" class="menu-icon" alt="Logo" /> YOUTUBE
     </a>
     <a href="https://kangmarkus.com" target="_blank">
-      <img src="logo-removebg-preview.png" class="menu-icon" alt="Logo" /> WA 0812-6666-6347
+      <img src="logo-removebg-preview.png" class="menu-icon" alt="Logo" /> WA 0817-1730-3255
     </a>
   </div>
 
