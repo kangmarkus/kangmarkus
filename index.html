@@ -45,67 +45,56 @@
     }
 
     .description {
-      font-size: 16px; font-weight: 600;
+      font-size: 15px; font-weight: 600;
       max-width: 90%;
       color: #fff;
       margin-bottom: 25px;
-      line-height: 1.7;
+      line-height: 1.6;
       text-align: center;
       text-shadow: 0 0 10px rgba(255,0,0,0.3);
     }
 
-    <style>
-.info-box {
-  background: transparent; /* kotak dihapus */
-  border: 1.5px solid rgba(255, 0, 0, 0.8);
-  border-radius: 18px;
-  width: 340px;
-  padding: 16px 12px;
-  margin: 20px 0;
-  text-align: center;
-  line-height: 1.3; /* rapatkan teks */
-  font-size: 14px;
-  color: #fff;
-  letter-spacing: 0.3px;
-  box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
-  animation: borderGlow 3.5s ease-in-out infinite alternate;
-  backdrop-filter: blur(2px);
-}
+    /* ===== Info Box (Elegan: hanya garis atas-bawah) ===== */
+    .info-box {
+      position: relative;
+      text-align: center;
+      width: 340px;
+      padding: 18px 10px;
+      margin: 20px 0;
+      font-size: 14px;
+      color: #fff;
+      letter-spacing: 0.4px;
+      line-height: 1.3;
+      text-transform: uppercase;
+    }
 
-/* Efek gradasi menyala halus untuk tulisan penting */
-.info-box strong {
-  background: linear-gradient(90deg, #ff3333, #ff9999, #ff3333);
-  background-size: 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shineText 4s linear infinite;
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  text-shadow: 0 0 8px rgba(255, 0, 0, 0.5);
-}
+    /* Garis atas dan bawah merah berkilau */
+    .info-box::before,
+    .info-box::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, rgba(255,0,0,0), #ff1a1a, rgba(255,0,0,0));
+      box-shadow: 0 0 15px rgba(255,0,0,0.7);
+      animation: lineGlow 3s ease-in-out infinite alternate;
+    }
+    .info-box::before { top: 0; }
+    .info-box::after { bottom: 0; }
 
-/* Efek glow lembut di garis tepi */
-@keyframes borderGlow {
-  0% { box-shadow: 0 0 10px rgba(255,0,0,0.4), inset 0 0 6px rgba(255,0,0,0.3); }
-  50% { box-shadow: 0 0 22px rgba(255,100,100,0.5), inset 0 0 10px rgba(255,0,0,0.3); }
-  100% { box-shadow: 0 0 10px rgba(255,0,0,0.4), inset 0 0 6px rgba(255,0,0,0.3); }
-}
-
-/* Efek gradasi bergerak lembut pada teks strong */
-@keyframes shineText {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* Responsif */
-@media (max-width: 500px) {
-  .info-box { width: 280px; font-size: 13px; padding: 14px; }
-  .info-box strong { font-size: 14px; }
-}
-</style>
-
+    /* Efek teks gradasi lembut */
+    .info-box strong {
+      background: linear-gradient(90deg, #ff3333, #ffaaaa, #ff3333);
+      background-size: 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shineText 5s linear infinite;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      text-shadow: 0 0 8px rgba(255, 0, 0, 0.4);
+    }
 
     @keyframes shineText {
       0% { background-position: 0% 50%; }
@@ -113,13 +102,13 @@
       100% { background-position: 0% 50%; }
     }
 
-    @keyframes borderGlow {
-      0% { box-shadow: 0 0 12px rgba(255,0,0,0.4), inset 0 0 8px rgba(255,0,0,0.3); }
-      50% { box-shadow: 0 0 28px rgba(255,120,120,0.6), inset 0 0 18px rgba(255,0,0,0.4); }
-      100% { box-shadow: 0 0 12px rgba(255,0,0,0.4), inset 0 0 8px rgba(255,0,0,0.3); }
+    @keyframes lineGlow {
+      0% { opacity: 0.7; box-shadow: 0 0 8px rgba(255,0,0,0.4); }
+      50% { opacity: 1; box-shadow: 0 0 18px rgba(255,100,100,0.6); }
+      100% { opacity: 0.7; box-shadow: 0 0 8px rgba(255,0,0,0.4); }
     }
 
-    /* ===== MENU ===== */
+    /* ===== Menu ===== */
     .menu {
       width: 90%; max-width: 400px;
       display: flex;
@@ -187,13 +176,13 @@
     .falling-ball {
       position: fixed;
       top: -50px;
-      width: 32px;
-      height: 32px;
+      width: 28px;
+      height: 28px;
       background: url('logo-removebg-preview (2).png') no-repeat center / contain;
       pointer-events: none;
       animation: fall linear forwards;
       z-index: 0;
-      opacity: 0.9;
+      opacity: 0.8;
     }
 
     @keyframes fall {
@@ -205,13 +194,13 @@
 
     @media (max-width: 500px) {
       h1 { font-size: 32px; }
-      .info-box { width: 280px; font-size: 12px; padding: 16px; }
-      .info-box strong { font-size: 14px; }
+      .info-box { width: 280px; font-size: 13px; padding: 16px; }
       .menu a { font-size: 16px; padding: 16px; }
       .menu a.primary { font-size: 20px; padding: 20px; }
     }
   </style>
 </head>
+
 <body>
 
   <div class="profile">
@@ -223,12 +212,12 @@
   <div class="description">
     KANGMARKUS.COM / KANGMARKUS / ANGKA ONLINE / BET ANGKA, GAMES BOLA TERNAMA SEPERTI SBOBET SPORTS, SABA SPORTS, PINNACLE SPORTS. SLOT, LIVEGAMES SERTA PERMAINAN TEMBAK IKAN
   </div>
-
   <div class="info-box">
     <strong>HADIAH FULLBET</strong><br>
     4D x 10.000 / 2D x 100<br>(Termasuk TOTOMACAU)<br><br>
     <strong>Minimal Deposit Rp.10,000<br>dan Withdraw Rp.50,000</strong><br><br>
     AMAN DAN AMANAH
+    DAFTAR DAN JOIN SEKARANG, MARI KITA MENANG BERSAMA!
   </div>
 
   <div class="menu">
@@ -251,13 +240,11 @@
       const ball = document.createElement('div');
       ball.classList.add('falling-ball');
       ball.style.left = Math.random() * window.innerWidth + 'px';
-      ball.style.animationDuration = (4 + Math.random() * 4) + 's';
+      ball.style.animationDuration = (5 + Math.random() * 4) + 's';
       document.body.appendChild(ball);
-
-      setTimeout(() => ball.remove(), 8000);
+      setTimeout(() => ball.remove(), 9000);
     }
-
-    setInterval(createFallingBall, 700);
+    setInterval(createFallingBall, 1300);
   </script>
 </body>
 </html>
