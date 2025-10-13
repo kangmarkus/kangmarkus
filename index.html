@@ -54,36 +54,51 @@
       text-shadow: 0 0 10px rgba(255,0,0,0.3);
     }
 
+    /* ===== INFO BOX (Revisi) ===== */
     .info-box {
-      background: linear-gradient(180deg, #1a0000 0%, #0d0d0d 100%);
-      border: 2px solid #b30000;
+      background: transparent; /* Tanpa background kotak */
+      border: 2px solid #ff0000; /* Garis merah */
       border-radius: 20px;
       width: 340px;
-      padding: 22px 18px;
-      margin: 20px 0;
-      box-shadow: 0 0 25px rgba(255,0,0,0.3);
+      padding: 18px 14px;
+      margin: 25px 0;
       text-align: center;
-      line-height: 1.4;
-      font-size: 15px;
-      font-weight: 400;
-      color: #e8e8e8;
-      letter-spacing: 0.2px;
-      animation: infoGlow 5s ease-in-out infinite alternate;
-    }
-    .info-box strong {
-      color: #ff3333;
-      font-size: 18px;
-      font-weight: 700;
+      font-size: 13px; /* Lebih kecil tapi tetap jelas */
+      color: #fff;
       letter-spacing: 0.4px;
-      text-shadow: 0 0 10px rgba(255,0,0,0.5);
+      text-transform: uppercase;
+      text-shadow: 0 0 10px rgba(255,80,80,0.8);
+      box-shadow: 0 0 18px rgba(255,0,0,0.4), inset 0 0 10px rgba(255,0,0,0.3);
+      animation: borderGlow 3.5s ease-in-out infinite alternate;
+      backdrop-filter: blur(2px);
     }
 
-    @keyframes infoGlow {
-      0% { box-shadow: 0 0 15px rgba(255,0,0,0.3); }
-      50% { box-shadow: 0 0 30px rgba(255,200,200,0.4); }
-      100% { box-shadow: 0 0 15px rgba(255,0,0,0.3); }
+    /* Efek gradasi merah menyala di teks utama */
+    .info-box strong {
+      background: linear-gradient(90deg, #ff0000, #ff6666, #ffffff, #ff6666, #ff0000);
+      background-size: 300%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shineText 5s linear infinite;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-shadow: 0 0 10px rgba(255,0,0,0.6);
     }
 
+    @keyframes shineText {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes borderGlow {
+      0% { box-shadow: 0 0 12px rgba(255,0,0,0.4), inset 0 0 8px rgba(255,0,0,0.3); }
+      50% { box-shadow: 0 0 28px rgba(255,120,120,0.6), inset 0 0 18px rgba(255,0,0,0.4); }
+      100% { box-shadow: 0 0 12px rgba(255,0,0,0.4), inset 0 0 8px rgba(255,0,0,0.3); }
+    }
+
+    /* ===== MENU ===== */
     .menu {
       width: 90%; max-width: 400px;
       display: flex;
@@ -169,7 +184,8 @@
 
     @media (max-width: 500px) {
       h1 { font-size: 32px; }
-      .info-box { width: 280px; padding: 20px; }
+      .info-box { width: 280px; font-size: 12px; padding: 16px; }
+      .info-box strong { font-size: 14px; }
       .menu a { font-size: 16px; padding: 16px; }
       .menu a.primary { font-size: 20px; padding: 20px; }
     }
