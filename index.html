@@ -101,25 +101,25 @@
     .menu a {
       display: flex;
       align-items: center;
-      justify-content: flex-start; /* Mengubah dari center ke rata kiri */
-      gap: 15px;                  /* Jarak antara ikon dan teks */
-      padding: 14px 25px;         /* Padding kiri diperbesar agar teks tidak mepet pinggir */
+      justify-content: flex-start; /* Tetap rata kiri */
+      gap: 15px;
+      padding: 12px 20px;         /* Padding disesuaikan agar rapi */
       text-decoration: none;
       font-weight: 600;
       color: #fff;
       background: #1a1a1a;
       border: 1px solid #333;
-      border-radius: 8px;
+      border-radius: 12px;        /* Sudut tombol sedikit lebih melengkung */
       text-transform: uppercase;
       transition: all 0.3s ease;
       font-size: 15px;
-      width: 100%;                /* Memastikan tombol memenuhi lebar container */
+      width: 100%;
     }
 
     /* Tombol Utama (Gold Putih) */
     .menu a.primary {
-      background: linear-gradient(145deg, #d4af37, #996515);
-      color: #000; /* Teks hitam agar kontras di warna emas */
+      background: linear-gradient(145deg, #d4af37, #b8860b);
+      color: #000; /* Mengubah teks jadi hitam agar kontras di atas warna emas */
       border: none;
       font-weight: 700;
       box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
@@ -137,8 +137,14 @@
     }
 
     .menu-icon { 
-      width: 24px; height: 24px; 
-      filter: brightness(0) invert(1); /* Icon jadi putih */
+      width: 32px;            /* Ukuran ikon sedikit diperbesar */
+      height: 32px; 
+      background-color: #fff; /* Memberi warna dasar putih */
+      border-radius: 50%;     /* Membuatnya bulat sempurna */
+      padding: 5px;           /* Jarak logo dari pinggiran bulat putih */
+      object-fit: contain;
+      flex-shrink: 0;         /* Agar ikon tidak gepeng */
+      /* Hapus filter invert sebelumnya agar logo asli terlihat di dalam bulatan */
     }
 
     /* ===== Footer ===== */
@@ -189,16 +195,16 @@
     AMAN DAN AMANAH
   </div>
   <div class="menu">
-    <a href="https://ligabandot31808.com/?referralid=anshun168" target="_blank" class="primary"><img src="logo-removebg-preview.png" class="menu-icon" alt="Logo"> LOGIN SITUS BARU</a>
-    <a href="https://ligabandot86456.com/?referralid=anshun168" target="_blank" class="primary"><img src="logo-removebg-preview.png" class="menu-icon" alt="Logo"> DAFTAR SITUS BARU</a>
-    <a href="https://angkabet30294.com/?referralid=anshun168" target="_blank" class="primary"><img src="logo-removebg-preview.png" class="menu-icon" alt="Logo"> LOGIN SITUS LAMA</a>
-    <a href="https://angkabet32321.com/?referralid=anshun168" target="_blank" class="primary"><img src="logo-removebg-preview.png" class="menu-icon" alt="Logo"> DAFTAR SITUS LAMA</a>
-    <a href="https://ligabandot31808.com/blog/?title=PREDIKSI%20BOLA" target="_blank" class="primary"><img src="logo-removebg-preview.png" class="menu-icon" alt="Logo"> PREDIKSI BOLA</a>
-    <a href="https://cucubola.online" target="_blank" class="primary"><img src="logo-removebg-preview.png" class="menu-icon" alt="Logo"> PREDIKSI ANGKA</a>
-    <a href="https://direct.lc.chat/19244517" target="_blank"><img src="logo-removebg-preview.png" class="menu-icon" alt="Logo"> LIVE CHAT SITUS BARU</a>
-    <a href="https://direct.lc.chat/16829148/?utm_medium=social&utm_source=heylink.me" target="_blank"><img src="logo-removebg-preview.png" class="menu-icon" alt="Logo"> LIVE CHAT SITUS LAMA</a>
-    <a href="https://cucubola.online/" target="_blank"><img src="logo-removebg-preview.png" class="menu-icon" alt="Logo"> RTP SLOT</a>
-    <a href="https://kangmarkus.com" target="_blank"><img src="logo-removebg-preview.png" class="menu-icon" alt="Logo"> WA 0817-1730-3255</a>
+    <a href="https://ligabandot31808.com/?referralid=anshun168" target="_blank" class="primary"><img src="logo.ligabandot.png" class="menu-icon" alt="Logo"> LOGIN SITUS BARU</a>
+    <a href="https://ligabandot86456.com/?referralid=anshun168" target="_blank" class="primary"><img src="logo.ligabandot.png" class="menu-icon" alt="Logo"> DAFTAR SITUS BARU</a>
+    <a href="https://angkabet30294.com/?referralid=anshun168" target="_blank" class="primary"><img src="logo.ligabandot.png" class="menu-icon" alt="Logo"> LOGIN SITUS LAMA</a>
+    <a href="https://angkabet32321.com/?referralid=anshun168" target="_blank" class="primary"><img src="logo.ligabandot.png" class="menu-icon" alt="Logo"> DAFTAR SITUS LAMA</a>
+    <a href="https://ligabandot31808.com/blog/?title=PREDIKSI%20BOLA" target="_blank" class="primary"><img src="logo.ligabandot.png" class="menu-icon" alt="Logo"> PREDIKSI BOLA</a>
+    <a href="https://cucubola.online" target="_blank" class="primary"><img src="logo.ligabandot.png" class="menu-icon" alt="Logo"> PREDIKSI ANGKA</a>
+    <a href="https://direct.lc.chat/19244517" target="_blank"><img src="logo.ligabandot.png" class="menu-icon" alt="Logo"> LIVE CHAT SITUS BARU</a>
+    <a href="https://direct.lc.chat/16829148/?utm_medium=social&utm_source=heylink.me" target="_blank"><img src="logo.ligabandot.png" class="menu-icon" alt="Logo"> LIVE CHAT SITUS LAMA</a>
+    <a href="https://cucubola.online/" target="_blank"><img src="logo.ligabandot.png" class="menu-icon" alt="Logo"> RTP SLOT</a>
+    <a href="https://kangmarkus.com" target="_blank"><img src="logo.ligabandot.png" class="menu-icon" alt="Logo"> WA 0817-1730-3255</a>
   </div>
   <footer>
     &copy; 2025 Kangmarkus.com | Semua Hak Dilindungi | ©Copyright 2014 - 2029 Kangmarkus
