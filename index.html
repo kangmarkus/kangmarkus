@@ -2,6 +2,7 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="description" content="KANGMARKUS - Situs prediksi bola akurat, angka online, dan permainan live games terbaik.">
 <meta name="keywords" content="Kangmarkus, Prediksi Bola, Angka Online, Ligabandot, Angkabet">
   <title>KANGMARKUS</title>
@@ -13,6 +14,7 @@
     
     body {
       font-family: 'Poppins', sans-serif;
+      background-color: #0d0d0d;
       /* Background cokelat hitam sangat gelap untuk kesan mewah */
       background: radial-gradient(circle at top, #1e160a 0%, #0a0a0a 100%);
       color: #fff;
@@ -61,7 +63,8 @@
     .info-box {
       position: relative;
       text-align: center;
-      width: 350px;
+      width: 90%;
+      max-width: 350px;
       padding: 12px;
       margin: 10px 0;
       font-size: 13px;
@@ -171,6 +174,25 @@
       .info-box { width: 300px; }
       .menu a { font-size: 14px; padding: 12px; }
     }
+
+    .falling-ball {
+  position: fixed;
+  top: -20px;
+  width: 12px;
+  height: 12px;
+  background: radial-gradient(circle, #d4af37, #8b6b0d); /* Warna emas */
+  border-radius: 50%;
+  pointer-events: none; /* Agar tidak menghalangi klik pada tombol */
+  z-index: -1; 
+  animation: fall linear forwards;
+  opacity: 0.5;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+  }
+} /* Harus ada tutup ini */
   </style>
 </head>
 
