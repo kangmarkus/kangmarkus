@@ -173,25 +173,7 @@
       h1 { font-size: 28px; }
       .info-box { width: 300px; }
       .menu a { font-size: 14px; padding: 12px; }
-    }
 
-    .falling-ball {
-  position: fixed;
-  top: -20px;
-  width: 12px;
-  height: 12px;
-  background: radial-gradient(circle, #d4af37, #8b6b0d); /* Warna emas */
-  border-radius: 50%;
-  pointer-events: none; /* Agar tidak menghalangi klik pada tombol */
-  z-index: -1; 
-  animation: fall linear forwards;
-  opacity: 0.5;
-}
-
-@keyframes fall {
-  to {
-    transform: translateY(110vh);
-  }
 } /* Harus ada tutup ini */
   </style>
 </head>
@@ -229,16 +211,7 @@
   </footer>
 
   <script>
-    // Efek bola jatuh
-    function createFallingBall() {
-      const ball = document.createElement('div');
-      ball.classList.add('falling-ball');
-      ball.style.left = Math.random() * window.innerWidth + 'px';
-      ball.style.animationDuration = (5 + Math.random() * 4) + 's';
-      document.body.appendChild(ball);
-      setTimeout(() => ball.remove(), 9000);
-    }
-    setInterval(createFallingBall, 1300);
+
   </script>
 </body>
 </html>
